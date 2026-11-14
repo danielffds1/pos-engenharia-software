@@ -1,0 +1,9 @@
+# Este repositório (pos-engenharia-software) é um monorepo com os desafios
+# da pós. O desafio de Prompt Engineering vive em seu próprio repositório Git
+# separado (fork independente), então não é versionado aqui.
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
