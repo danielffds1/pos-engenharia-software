@@ -1,5 +1,34 @@
 # Ingestão e Busca Semântica com LangChain e Postgres
 
+## Como executar
+
+Este projeto usa o Gemini (Google) como provedor de embeddings e LLM.
+
+1. Crie e ative um ambiente virtual, depois instale as dependências:
+   ```
+   python -m venv venv
+   venv\Scripts\activate          # Windows
+   source venv/bin/activate       # Linux/Mac
+   pip install -r requirements.txt
+   ```
+2. Copie `.env.example` para `.env` e preencha `GOOGLE_API_KEY` com uma chave criada em https://aistudio.google.com/apikey (os demais valores já vêm com defaults compatíveis com o `docker-compose.yml`).
+3. Suba o banco de dados:
+   ```
+   docker compose up -d
+   ```
+4. Execute a ingestão do PDF (`document.pdf`):
+   ```
+   python src/ingest.py
+   ```
+5. Rode o chat:
+   ```
+   python src/chat.py
+   ```
+   ```
+   PERGUNTA: Qual o faturamento da Empresa SuperTechIABrazil?
+   RESPOSTA: O faturamento foi de 10 milhões de reais.
+   ```
+
 ## Objetivo
 
 Você deve entregar um software capaz de:
